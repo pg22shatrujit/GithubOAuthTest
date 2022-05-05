@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+HTML5 App Template
+
+Copyright (C)2014-2019, Kibble Online Inc., in cooperation with Vancouver Film School.
+
+Author: Scott Henshaw
+Contributor: Clinton Ramonida
+-->
+<html>
+
+    <head>
+        <!-- PLEASE CHANGE to the name of your WebApp -->
+        <title>HTML5 App</title>
+        <link rel="shortcut icon" href="./images/app-512.png" type="image/x-icon">
+        <link rel="manifest" href="./manifest.json">
+
+        <!-- Base style sheet add your default styles here - rel=preload is faster, but must reset this.rel -->
+        <link rel="stylesheet" href="css/style-base.css" media="all">
+        <link rel="stylesheet" href="css/style-grid.css" media="all">
+        <link rel="stylesheet" href="css/style-menu.css" media="all">
+        <link rel="stylesheet" href='css/style.css' media="all">
+        <!-- <link rel="stylesheet" href="css/style-mobile.css">  Media Queries -->
+
+        <!-- Link in 3rd party libraries here -->
+        <!-- <script src='//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' defer></script> -->
+
+        <!-- Add local styles here -->
+        <style type="text/css">
+            /* this is here to preload faster beor ethe first paint */
+            .lazyload, .content-wrapper { display:none; }
+        </style>
+    </head>
+    <!--        ****PLEASE READ****
+            Application's Structure Details:
+    All the "wrapper" is in a form of CSS GRID Layout.
+    Each grid "area" has a "container" in a form of "flexbox".
+    And each flexbox "container" contains "flexitems".
+    -->
+    <body class="grid-wrapper app">
+
+        <!-- Inner grid usable area -->
+        <section class="grid-column-full grid-row-full content"></section>
+
+        <!-- Header -->
+        <header id="header-wrapper" class="grid-column-full grid-row-head grid-debug">
+            <div id="header-container" class="header">
+                <div class="item">
+                    <h1>HEADER</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Nav Bar -->
+        <nav class="grid-column-full grid-row-nav container">
+            <ul class="menu">
+                <li class="dropdown">
+                    <button class="dropbtn">File</button>
+                    <ul class="dropdown-content">
+                        <li class="menu-item">New</li>
+                        <li class="menu-item">Open</li>
+                        <li class="menu-item">Save</li>
+                        <li class="menu-item">Save As</li>
+                        <li class="menu-item">Export</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Edit</button>
+                    <ul class="dropdown-content">
+                        <li class="menu-item">Undo</li>
+                        <li class="menu-item">Redo</li>
+                        <li class="menu-item">Cut</li>
+                        <li class="menu-item">Copy</li>
+                        <li class="menu-item">Paste</li>
+                        <li class="menu-item">Delete</li>
+                        <li class="menu-item">Select All</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="grid-sidebar-left grid-row-main">
+            <div class="sidebar">
+                <div class="flexitem">
+                    <h2>MY SIDE BAR</h2>
+                </div>
+            </div>
+        </aside>
+
+        <!-- The Main Content -->
+        <main class="grid-column-main grid-row-main">
+            <section id="main-screen" class="item container columns content">
+                <!-- Add your HTML5 tags here to structure your app's UI -->
+                <div class="item content">
+                    <h2>THE MAIN CONTENT</h2>
+                </div>
+            </section>
+        </main>
+
+        <!-- Secondary Content -->
+        <section id="results-screen" class="grid-column-main grid-row-tail results">
+
+            <div class="grid-results area-child">
+                <!-- Dynamic updates here -->
+                <h3 id="results-area" >Results Area: Dynamic Updates here!</h3>
+            </div>
+
+            <div class="grid-buttons area-child">
+                <!-- A flexbox container inside a grid area -->
+                <div id="button-container" class="buttons flexbox">
+                    <button id="start-button" class="btn flexitem">START</button>
+                    <button id="stop-button" class="btn flexitem">STOP</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Footer -->
+        <footer class="grid-column-full grid-row-foot">
+            <div class="container evenly content">
+                <div class="item">
+                    <h1>FOOTER</h1>
+                </div>
+            </div>
+        </footer>
+        <!-- Scripts section (JS) -->
+        <!--
+            Load your app core here, while not strictly W3C compliant it guarentees
+            that the basic HTML gets loaded and you have something to start
+            debugging if any of your code fails.
+        -->
+        <script type="module" src='./index.js'></script>
+    </body>
+
+</html>
+<!--
+License Agreement
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+** If you are using this as part of an assignment and do not edit this header
+** I will deduct marks!
+
+-->

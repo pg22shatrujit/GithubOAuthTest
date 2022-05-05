@@ -1,0 +1,72 @@
+/**
+ * CSS Styles for Apps based on this template - add your styles here
+ * CSS Styles for VFS Demo App
+ *
+ * @Copyright 2014-2022, Vancouver Film School, In cooperation with Kibble Games Inc.
+ * @author: Scott Henshaw
+ * @Contributor: Clinton Ramonida
+ */
+h1, h2, h3 {
+    margin: 0.2em;
+    padding: 0.25em;
+}
+
+h2, h3 { border: 2px solid black; }
+
+aside {
+    background-color: antiquewhite;
+    color:#222222;
+}
+
+/* Override part of the grid for this app */
+.grid-column-main { grid-column-end: 7; }
+
+.app {
+    background-color: gray;
+}
+
+.content {
+    background-color: #222222;
+}
+
+.results {
+    background-color:cadetblue;
+    font-size: 18px;
+    text-shadow: black 1px 1px;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Black */
+    height: 40px;
+    width: 80px;
+    margin: 2px;
+}
+
+.btn:hover {
+    background-color: #555555;
+    color: white;
+}
+
+ /**
+ *  @license:
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
